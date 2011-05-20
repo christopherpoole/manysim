@@ -1,3 +1,14 @@
+####################################################
+# Lanuching jobs on Amazon EC2 
+#
+# File:      manysim.py
+#
+# Author:    Christopher M Poole,
+# Email:     mail@christopherpoole.net
+#
+# Date:      20th March, 2011
+####################################################
+
 import os
 import time
 import urllib
