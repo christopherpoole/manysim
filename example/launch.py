@@ -29,11 +29,11 @@ config_params = {
 config = Configuration(**config_params)
 
 # Local (with user_data override)
-#master = JobMaster(in_cloud=False, user_data=config)
-#master.run()
+master = JobMaster(in_cloud=False, user_data=config)
+master.run()
 
 # Remote
-cloud = Cluster(config)
-cloud.start()    
+#cloud = Cluster(config)
+#cloud.start()    
 #cloud.stop()
-cloud.terminate()
+#cloud.terminate()

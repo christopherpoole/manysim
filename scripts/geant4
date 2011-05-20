@@ -1,0 +1,6 @@
+#! /bin/sh
+export PYTHONPATH=$PYTHONPATH:/opt/python/manysim:/opt/cern/geant4.9.3.p01/python/lib:/root/lib
+
+cd /root/
+sleep 20 && /usr/bin/python -B /opt/python/manysim/scripts/run.py
+
