@@ -13,8 +13,6 @@ setup(name='manysim',
       author_email='mail@christopherpoole.net',
       url='http://code.google.com/p/manysim/',
       py_modules=['manysim'],
-      data_files=[('example', ['example/job.py', 'example/launch.py']),
-                  ('scripts', ['scripts/geant4', 'scripts/run.py'])],
       install_requires=['boto'],
       classifiers=[
         'Development Status :: 4 - Beta',
