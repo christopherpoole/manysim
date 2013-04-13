@@ -1,3 +1,5 @@
+This repository is a mirror of the [original project on Google Code](http://code.google.com/p/manysim/).
+
 #Introduction
 What initially started out as an easy way of running GEANT4 simulations on AWS EC2, manysim is a simple technique for executing arbitary code on EC2 using Python and the [boto](http://code.google.com/p/boto/) Python module.
 Jobs can be launched from the local user machine and executed on the EC2 with results returned to the user via S3. It is up to the user to configure an Amazon Machine Image with any packages or tools on it they require.
