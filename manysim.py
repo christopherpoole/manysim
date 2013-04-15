@@ -85,8 +85,12 @@ class Store(object):
     def compress(self, archive_name, files, compression='w:bz2'):
         # assert compression[0] == 'w', "we are writing"
         tar = tarfile.open(archive_name, compression)
-        for k,v  in files.iteritems():
-            tar.add(k, arcname=v)
+        if isinstance(files, dict):
+            for k,v  in files.iteritems():
+                tar.add(k, arcname=v)
+        else:
+            for f in files:
+                tar.add(f, arcname=f)
         tar.close()
         
 
