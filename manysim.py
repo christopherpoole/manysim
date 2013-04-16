@@ -103,8 +103,13 @@ class Instance(object):
         
         self._user_data = pickle.dumps(self._config)
         
-        self._conn = boto.connect_ec2(aws_access_key_id=self._config.access_key,
-            aws_secret_access_key=self._config.secret_key)
+        if (self._config, 'region'):
+            self._conn = boto.connect_ec2(aws_access_key_id=self._config.access_key,
+                aws_secret_access_key=self._config.secret_key)
+        else:
+            self._conn = boto.ec2.connect_to_region(self._config.region,
+                aws_access_key_id=self._config.access_key,
+                aws_secret_access_key=self._config.secret_key)
     
     def run(self):
         if self._config.spot is True:
