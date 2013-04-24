@@ -219,7 +219,7 @@ class JobMaster(object):
     
         # TODO: Need some error checking here to ensure we end up with a config
         if self._in_cloud is True:        
-            self._config = pickle.load(file("/var/lib/cloud/data/user-data.txt"))
+            self._config = pickle.load(file("/var/lib/cloud/instances/%s/user-data.txt" % self._id))
             store = Store(self._config)
             store.pull(self._config.job_archive, self._config.job_archive)
             store.extract(self._config.job_archive)
