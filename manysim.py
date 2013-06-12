@@ -123,7 +123,7 @@ class Instance(object):
     def _spot(self):
         assert hasattr (self._config, 'price'), \
             "Must set maximum spot price Configuration.spot"
-        self._instances = self.conn.request_spot_instances(self._config.spot_price,
+        self._instances = self._conn.request_spot_instances(self._config.spot_price,
                 self._config.instance_image,
                 count=1,
                 key_name=self._config.key_name,
